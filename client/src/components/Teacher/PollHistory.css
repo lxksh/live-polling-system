@@ -1,0 +1,237 @@
+.poll-history-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.poll-history-container {
+    background: var(--surface);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
+}
+
+.poll-history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    border-bottom: 1px solid var(--border-color);
+    background: linear-gradient(135deg, var(--primary-purple) 0%, var(--secondary-purple) 100%);
+    color: white;
+    border-radius: 20px 20px 0 0;
+}
+
+.poll-history-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.close-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.poll-history-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 30px;
+}
+
+.poll-history-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.poll-history-content::-webkit-scrollbar-track {
+    background: var(--option-bg);
+    border-radius: 3px;
+}
+
+.poll-history-content::-webkit-scrollbar-thumb {
+    background: var(--primary-purple);
+    border-radius: 3px;
+}
+
+.no-history {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-secondary);
+}
+
+.no-history-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.history-item {
+    background: var(--option-bg);
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid var(--border-color);
+}
+
+.history-item:last-child {
+    margin-bottom: 0;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.question-label {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.poll-date {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    background: var(--surface);
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+.history-question {
+    background: var(--question-bg);
+    color: white;
+    padding: 20px 25px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.history-results {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.history-result-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.result-option {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 150px;
+}
+
+.progress-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 12px;
+    background: var(--surface);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 6px;
+    transition: width 0.8s ease;
+}
+
+.history-stats {
+    display: flex;
+    gap: 25px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    background: var(--surface);
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stat-value {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+    .poll-history-overlay {
+        padding: 10px;
+    }
+
+    .poll-history-container {
+        max-height: 95vh;
+    }
+
+    .poll-history-header {
+        padding: 20px;
+    }
+
+    .poll-history-title {
+        font-size: 1.5rem;
+    }
+
+    .poll-history-content {
+        padding: 20px;
+    }
+
+    .history-item {
+        padding: 20px;
+    }
+
+    .history-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .history-stats {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

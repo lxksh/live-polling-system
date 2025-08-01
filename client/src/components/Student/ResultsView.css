@@ -1,0 +1,232 @@
+.results-view-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background);
+    padding: 20px;
+    position: relative;
+}
+
+.results-content {
+    width: 100%;
+    max-width: 700px;
+}
+
+.results-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.question-number {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.timer.completed {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #27ae60;
+}
+
+.question-box {
+    background: var(--question-bg);
+    color: white;
+    padding: 25px 30px;
+    border-radius: 12px 12px 0 0;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.results-container {
+    background: var(--surface);
+    border-radius: 0 0 12px 12px;
+    padding: 30px;
+    box-shadow: 0 8px 30px var(--shadow);
+    border: 1px solid var(--border-color);
+    border-top: none;
+}
+
+.result-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.result-item:last-child {
+    margin-bottom: 0;
+}
+
+.result-option {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 150px;
+}
+
+.option-number {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+    color: white;
+    flex-shrink: 0;
+}
+
+.option-number.first {
+    background: var(--primary-purple);
+}
+
+.option-number.second {
+    background: var(--secondary-purple);
+}
+
+.option-number.third {
+    background: var(--accent-purple);
+}
+
+.option-number.fourth {
+    background: #8E7BDA;
+}
+
+.option-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.progress-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 12px;
+    background: var(--option-bg);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 6px;
+    transition: width 0.8s ease;
+    position: relative;
+}
+
+.progress-fill.first {
+    background: linear-gradient(135deg, var(--primary-purple) 0%, var(--secondary-purple) 100%);
+}
+
+.progress-fill.second {
+    background: linear-gradient(135deg, var(--secondary-purple) 0%, var(--accent-purple) 100%);
+}
+
+.progress-fill.third {
+    background: linear-gradient(135deg, var(--accent-purple) 0%, #8E7BDA 100%);
+}
+
+.progress-fill.fourth {
+    background: linear-gradient(135deg, #8E7BDA 0%, #9B8CE8 100%);
+}
+
+.percentage {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text-primary);
+    min-width: 45px;
+    text-align: right;
+}
+
+.wait-message {
+    text-align: center;
+    margin-top: 40px;
+    padding: 30px;
+    background: linear-gradient(135deg, rgba(119, 101, 218, 0.05) 0%, rgba(87, 103, 205, 0.05) 100%);
+    border-radius: 12px;
+    border: 1px solid rgba(119, 101, 218, 0.1);
+}
+
+.wait-message h3 {
+    color: var(--text-primary);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+
+@media (max-width: 768px) {
+    .results-view-container {
+        padding: 15px;
+    }
+
+    .results-content {
+        max-width: 100%;
+    }
+
+    .results-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .question-box {
+        font-size: 16px;
+        padding: 20px;
+    }
+
+    .results-container {
+        padding: 20px;
+    }
+
+    .result-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .result-option {
+        min-width: unset;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .progress-container {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .progress-bar {
+        width: 100%;
+    }
+
+    .percentage {
+        text-align: left;
+    }
+
+    .wait-message {
+        padding: 20px;
+        margin-top: 30px;
+    }
+
+    .wait-message h3 {
+        font-size: 1.1rem;
+    }
+}

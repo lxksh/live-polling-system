@@ -1,0 +1,127 @@
+.name-entry-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background);
+    padding: 20px;
+}
+
+.name-entry-content {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.badge {
+    margin-bottom: 50px;
+}
+
+.name-entry-title {
+    font-size: 3rem;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.name-entry-description {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 50px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.name-entry-description strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.name-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.name-input {
+    width: 100%;
+    padding: 20px 25px;
+    font-size: 1.1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    background: var(--surface);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.name-input:focus {
+    outline: none;
+    border-color: var(--primary-purple);
+    box-shadow: 0 0 0 3px rgba(119, 101, 218, 0.1);
+}
+
+.name-input::placeholder {
+    color: var(--text-secondary);
+}
+
+.input-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 4px 15px var(--shadow);
+    z-index: 10;
+}
+
+.suggestion-item {
+    padding: 12px 25px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--text-primary);
+    background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+    color: white;
+    font-weight: 500;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.suggestion-item:hover {
+    background: linear-gradient(135deg, #229954 0%, #28b463 100%);
+}
+
+.continue-btn {
+    width: 100%;
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .name-entry-title {
+        font-size: 2.2rem;
+    }
+
+    .name-entry-description {
+        font-size: 1.1rem;
+    }
+}

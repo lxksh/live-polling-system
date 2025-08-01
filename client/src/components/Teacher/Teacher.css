@@ -1,0 +1,115 @@
+.teacher-container {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.teacher-header {
+    background: white;
+    padding: 20px;
+    border-bottom: 1px solid #e1e5e9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.teacher-header h1 {
+    color: #333;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.student-count {
+    background: var(--primary-purple);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.student-count span {
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+.teacher-content {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+.teacher-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 200px;
+}
+
+.nav-btn {
+    padding: 12px 20px;
+    border: 2px solid #e1e5e9;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+    border-color: var(--primary-purple);
+    color: var(--primary-purple);
+}
+
+.nav-btn.active {
+    background: var(--primary-purple);
+    color: white;
+    border-color: var(--primary-purple);
+}
+
+.nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.history-btn {
+    background: var(--secondary-purple) !important;
+    color: white !important;
+    border-color: var(--secondary-purple) !important;
+}
+
+.teacher-main {
+    flex: 1;
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .teacher-content {
+        flex-direction: column;
+    }
+
+    .teacher-nav {
+        flex-direction: row;
+        overflow-x: auto;
+        min-width: auto;
+    }
+
+    .nav-btn {
+        white-space: nowrap;
+    }
+}

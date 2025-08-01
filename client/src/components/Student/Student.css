@@ -1,0 +1,29 @@
+.student-container {
+    min-height: 100vh;
+    background: var(--background);
+    position: relative;
+}
+
+.student-content {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.waiting-results {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.waiting-results .spinner {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 20px;
+}
+
+.waiting-results p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin: 0;
+}

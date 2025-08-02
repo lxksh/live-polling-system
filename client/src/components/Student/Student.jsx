@@ -39,9 +39,10 @@ const Student = () => {
     socket.on("student-joined", (data) => {
       if (data.success) {
         setCurrentScreen("waiting");
+        console.log("Successfully joined as student");
       }
     });
-
+    
     socket.on("question-started", (pollData) => {
       dispatch(setCurrentPoll(pollData));
       dispatch(setTimeRemaining(pollData.timeRemaining));
@@ -88,6 +89,9 @@ const Student = () => {
 
   const handleNameSubmit = (studentName) => {
     dispatch(setUser({ name: studentName, role: "student" }));
+    setTimeout(() => {
+      connectToSocket(); // manually trigger socket connection
+    }, 0);
   };
 
   const handleAnswerSubmit = (selectedOption) => {
